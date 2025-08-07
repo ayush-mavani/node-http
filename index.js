@@ -10,8 +10,8 @@ app.use(cors());
 app.use(express.json());
 
 // Sample Route
-app.get("/", (req, res) => {
-  res.send("Hello, Node.js with Express!");
+app.all("/", (req, res) => {
+  res.send("server is running");
 });
 
 // Create HTTP Server
