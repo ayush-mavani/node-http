@@ -18,6 +18,6 @@ app.all("/", (req, res) => {
 const server = http.createServer(app);
 
 // Start Server
-server.listen(PORT, () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
