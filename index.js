@@ -11,7 +11,7 @@ app.use(express.json());
 
 // Sample Route
 app.all("/", (req, res) => {
-  res.send("server is running");
+  res.json({Message:"Server working fine!"});
 });
 
 // Create HTTP Server
