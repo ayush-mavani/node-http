@@ -4,6 +4,7 @@ const cors = require("cors");
 
 const app = express();
 const PORT = 3000;
+const HOST = "0.0.0.0"; // required for ECS / Docker networking
 
 // Middleware
 app.use(cors());
@@ -25,6 +26,6 @@ app.get("/health-check", (req, res) => {
 const server = http.createServer(app);
 
 // Start Server
-server.listen(PORT, () => {
+server.listen(PORT, HOST, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
